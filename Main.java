@@ -1,44 +1,30 @@
-package bai1b;
+package bai2;
+/*
+    Trong bài 2 em chỉ dùng GPT phần toString của class LopHocPhan
+    CÒN LẠI EM TỰ CODE
+                              Ký tên
+                           Ngọc quỷ đỏ ♥
+* */
 
-import java.time.LocalDate;
-/*import java.time.format.DateTimeFormatter;
-import java.util.Scanner;
-*/
+
 public class Main {
     public static void main(String[] args) {
-        /*Scanner scanner = new Scanner(System.in);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");*/
+        SinhVien[] dsSV = new SinhVien[3];
+        dsSV[0] = new SinhVien("123", "Nguyễn Văn A");
+        dsSV[1] = new SinhVien("543", "Lê Thị B");
+        dsSV[2] = new SinhVien("321", "Lương Văn C");
 
-        // Tạo đối tượng 1
-        HangThucPham hang1 = new HangThucPham("001", "Gạo ", 100000, LocalDate.of(2018, 7, 10), LocalDate.of(2025, 7, 10));
-        System.out.println(hang1.toString());
+        LopHocPhan lopHocPhan = new LopHocPhan("123456", "LT Hướng đối tượng", "Nguyễn Văn A", "Thu 7, tiết 4-7, Phòng A1.1", dsSV);
 
-        // Tạo đối tượng 2
-        HangThucPham hang2 = new HangThucPham("002", "Mì", 5000, LocalDate.of(2018, 3, 1), LocalDate.of(2025, 9, 1));
-        System.out.println(hang2.toString());
-        
-
-        // Tạo đối tượng 3
-        HangThucPham hang3 = new HangThucPham("003", "Nước", 10000, LocalDate.of(2017, 3, 1), LocalDate.of(2019, 3, 1));
-        System.out.println(hang3.toString());
-
-        /*// Kiểm tra hàng đã hết hạn chưa
-        if (hang1.hetHan()) {
-            System.out.println(hang1.getTenHang() + " đã hết hạn.");
-        } else {
-            System.out.println(hang1.getTenHang() + " chưa hết hạn.");
+        System.out.println("Mã LHP: " + lopHocPhan.getMaLHP());
+        System.out.println("Tên LHP: " + lopHocPhan.getTenLHP());
+        System.out.println("GV giảng dạy: " + lopHocPhan.getTenGV());
+        System.out.println("Thông tin buổi hoc: " + lopHocPhan.getThongTinLopHoc());
+        System.out.println("Danh sách sinh viên: ");
+        for (SinhVien sv : lopHocPhan.getDsSV()) {
+            System.out.println(sv.getMaSV() + "\t | " + sv.getHoTen());
         }
-        
-        if (hang2.hetHan()) {
-            System.out.println(hang2.getTenHang() + " đã hết hạn.");
-        } else {
-            System.out.println(hang2.getTenHang() + " chưa hết hạn.");
-        }
-        
-        if (hang3.hetHan()) {
-            System.out.println(hang3.getTenHang() + " đã hết hạn.");
-        } else {
-            System.out.println(hang3.getTenHang() + " chưa hết hạn.");
-        }*/
+        System.out.println("Tổng số sinh viên: " + lopHocPhan.getSoLuongSV());
     }
+
 }
