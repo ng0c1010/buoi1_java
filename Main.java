@@ -2,8 +2,7 @@ package bai2;
 /*
     Trong bài 2 em chỉ dùng GPT phần toString của class LopHocPhan
     CÒN LẠI EM TỰ CODE
-                              Ký tên
-                           Ngọc quỷ đỏ ♥
+                           
 * */
 
 
